@@ -13,8 +13,7 @@ export const config = {
 }
 
 export default async (req, res) => {
-	const { port, hostname } = new URL(`http://${req.url}`);
-	let url = await db.get(hostname.split(".")[0])
+	let url = await db.get(req.headers.host)
 	return new Promise((resolve, reject) => {
 		proxy.web(req, res, { target: url, changeOrigin: true }, (err) => {
 			if (err) {
