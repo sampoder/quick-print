@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "http-proxy": "^1.18.1",
     "s1db": "^0.0.3"
   }
 }
