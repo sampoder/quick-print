@@ -14,9 +14,8 @@ export const config = {
 
 export default async (req, res) => {
 	let url = await db.get(req.headers.host.split(".")[0])
-	console.log(url)
 	if(!url){
 		return res.send("Invalid URL.")
 	}
-	res.redirect(`${url}/${req.query.path.join("/")}`)
+	res.redirect(`${url}/${req.query.path}`)
 }
