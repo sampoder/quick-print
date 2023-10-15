@@ -1,17 +1,28 @@
-<title>QuickPrint ➠</title>
+<head>
+	<title>QuickPrint ➠</title>
+	<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🖨️</text></svg>">
+</head>
 
-<h1>
-	QuickPrint ➠
-</h1>
+<body style="padding: 16px;">
 
-<p>
-	Here are the files currently in the <code>/print/</code> directory:
-</p>
-
-<ul>
-	{% for filename in files %}
-			<li>
-					<a href="/{{filename}}">{{ filename }}</a>
-			</li>
-	{% endfor %}
-</ul>
+	<h1>
+		QuickPrint ➠
+	</h1>
+	
+	{% if files|length > 0 %}
+			 <p>
+				 Here are the files currently in the <code>/print/</code> directory:
+			 </p>
+	{% else %}
+			 <p>Add your files for printing to the <code>/print/</code> directory.</p>
+	{% endif %}
+	
+	<ul>
+		{% for filename in files %}
+				<li>
+						<a href="/{{filename}}">{{ filename }}</a>
+				</li>
+		{% endfor %}
+	</ul>
+	
+</body>
