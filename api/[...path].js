@@ -18,12 +18,5 @@ export default async (req, res) => {
 	if(!url){
 		return res.send("Invalid URL.")
 	}
-	return new Promise((resolve, reject) => {
-		proxy.web(req, res, { target: url, changeOrigin: true }, (err) => {
-			if (err) {
-				return reject(err)
-			}
-			resolve()
-		})
-	})
+	res.redirect(`${url}/${req.query.path.join("/")}`)
 }
