@@ -1,4 +1,10 @@
 {
+	"redirects": [
+		{
+			"source": "/",
+			"destination": "/index"
+		}
+	],
 	"rewrites": [
 		{
 			"source": "/",
