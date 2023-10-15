@@ -1,0 +1,17 @@
+<title>QuickPrint ➠</title>
+
+<h1>
+	QuickPrint ➠
+</h1>
+
+<p>
+	Here are the files currently in the <code>/print/</code> directory:
+</p>
+
+<ul>
+	{% for filename in files %}
+			<li>
+					<a href="/{{filename}}">{{ filename }}</a>
+			</li>
+	{% endfor %}
+</ul>
