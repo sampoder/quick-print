@@ -15,6 +15,9 @@ export const config = {
 export default async (req, res) => {
 	let url = await db.get(req.headers.host.split(".")[0])
 	console.log(url)
+	if(!url){
+		return res.send("Invalid URL.")
+	}
 	return new Promise((resolve, reject) => {
 		proxy.web(req, res, { target: url, changeOrigin: true }, (err) => {
 			if (err) {
