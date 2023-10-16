@@ -10,4 +10,5 @@ Here's what it does:
 
 And then I can get my files! Once I quit the program it deletes the `print` and takes down the web server.
 
-<img width="682" alt="Screenshot 2023-10-14 at 9 21 56 PM" src="https://github.com/sampoder/quick-print/assets/39828164/6c27bf8a-9ec4-4779-b2d7-f7e98c69ea85">
+https://github.com/sampoder/quick-print/assets/39828164/dd7b4d63-05c2-45b5-9fa9-64206c773e7a
+
